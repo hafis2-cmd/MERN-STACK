@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMS IN HTML</title>
+</head>
+<body>
+    <h1 align="center">Hotel Booking Form</h1>
+    <form action="/submit" method="post">
+       <table width="50% "align="center">
+        <tr>
+            <td><label for="name">Name :</label></td>      <!--for attribute and id attribute should match-->
+            <td><input type="text" id="name" name="name" placeholder="Enter your Name" autocomplete="off" required minlength="3" maxlength="40"/></td>    <!--placeholder is used to show the text in the input field-->
+        </tr>     <!--autocomplete is used to off the suggestions-->
+        <tr>
+            <td><label for="password">Password :</label></td>
+            <td><input type="password" id="password" name="password" placeholder="Enter your Password" autocomplete="off" required minlength="3" maxlength="40"/></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email ID :</label></td>
+            <td><input type="email" id="email" name="email" placeholder="Enter your Email ID" autocomplete="off" required></td>
+        </tr>
+        <tr>
+            <td><label for="mob">MOBILE NUMBER :</label></td>
+            <td><input type="number" id="mob" name="mob" placeholder="Enter your Mobile number" autocomplete="off" required maxlength="10"></td>    <!--min="1" max="50" step="5" value="5"-->
+        </tr>  
+        <tr>
+            <td><label for="date">DATE :</label></td>
+            <td><input type="date" id="date" name="date" placeholder="Enter Date" required></td>
+        </tr>
+        <tr>
+            <td><label>Marital Status :</label></td>
+            <td>
+               <input type="radio" name="status">Married
+               <input type="radio" name="status">Unmarried      <!--checked : to select the radio button by default(default selection)-->
+            </td>
+        </tr>
+        <tr>
+            <td><label>Room Facility</label></td>
+            <td>
+                <input type="checkbox">With AC                    <!--radio : have only one option-->
+                <input type="checkbox">Without AC                 <!--checkbox : have multiple options-->
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="select_input">Other Facilities</label></td>
+            <td>
+                <select id="select_input" name="select_input">
+                    <option></option>
+                    <option value="hot water">Hot Water</option>
+                    <option value="cold water">Cold Water</option>        <!--value : used to save the value to the database-->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="add">Address :</label></td>
+            <td>
+                <textarea id="add" name="add" required style="resize: none;"></textarea>    <!--rows and cols are used to set the size of the textarea -->
+            </td>
+        </tr>
+        <tr>
+            <th colspan="2">
+                <input type="submit" value="Submit">
+                <input type="reset"  value="Reset">
+            </th>
+        </tr>
+       </table>
+    </form>
+</body>
+</html>
