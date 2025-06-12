@@ -1,0 +1,47 @@
+VARIABLES:
+       var  :variable
+       let
+       const
+
+there are functions used here.
+there are conditional statements.(if/else)
+
+JavaScript libraries:
+           react-> for building user interface.
+           jQuery-> Simplify html document traversing and manipulation
+
+The dynamic web pages =>
+                1)Event Handling
+                    *Respond to user interactions on websites.
+                2)DOM manipulation
+                    *Change the content and style of Web pages in real time. we can do all type of interaction.
+                3)Asynchronous Requests
+                    *Fetch data and update the ui without page reloads.  
+
+Javascript frameworks=>
+       1)AngularJS
+       Designed for building dynamic web apps
+       2)Vuejs
+       A progressive framework for building user interfaces
+       3)Emberjs
+       Emphasis developer productivity and erogonomics     
+
+Debug and troubleshooting
+       1)Error identification
+       Understand different types of javascript errors
+       2)Console log
+       Use console.log() To log data during programme execution    
+       3)Step through Code
+       Deploy breakpoints and walk through execution.
+
+Javascript security=>
+       Cross- Site Scripting(XSS)
+            prevent injecting malicious scripts.
+       Clickjacking
+            Protect against unauthorised framing of a web page.
+
+#ES6 features =>
+        1)Arrow functions
+           Shorter syntax for writing function expressions
+        2)Template Literals
+           Create multi-line strings and perform string interpolation                                                             

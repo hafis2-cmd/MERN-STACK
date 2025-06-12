@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JavaScript</title>
+</head>
+<body>
+    <h1>User Information</h1>
+    <div id="userInfo">Loading...</div>
+
+    <script>
+        // AJS is often associated with task like fetching data from server,handling user information or executing 
+        //code after some amount of time
+        //long-running task in the background
+
+        function fetchUserInfo(userId,callback){
+            setTimeout(function(){
+                const users={
+                    1:{name:'John',age:25,email:'john@example.com'}
+                };
+                const user=users[userId];
+                callback(user);
+            },2000);
+        }
+
+        function displayUserInfo(user){
+            const userInfoDiv=document.getElementById('userInfo');
+            if(user){
+                userInfoDiv.innerHTML=`
+                <h2>User Details</h2>
+                <table border="1" cellspacing=0 cellpadding=0>
+                    <tr>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Email</th>
+                    </tr>
+                    <tr>
+                        <td>${user.name}</td>
+                        <td>${user.age}</td>
+                        <td>${user.email}</td>
+                    </tr>
+                </table>            
+                `;
+            }else{
+                userInfoDiv.innerHTML='Failed to fetch user information';
+            }
+        }
+
+        const userIdToFetch=1;
+        fetchUserInfo(userIdToFetch,displayUserInfo);
+        console.log('Fetching user information');
+    </script>
+</body>
+</html>

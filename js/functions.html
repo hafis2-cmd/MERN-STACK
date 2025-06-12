@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript functions</title>
+</head>
+<body>
+    <h1>Arithmetic operation</h1>
+    <label for="num1">Enter Number 1 :</label>
+    <input type="number" id="num1">
+    <label for="num2">Enter Number 2 :</label>
+    <input type="number" id="num2">
+    <button onclick="performCalculations()">Perform Calculations</button>
+
+    <h2>Results : </h2>
+    <p id="additionResult"></p>
+    <p id="subtractionResult"></p>
+    <p id="multiplicationResult"></p>
+    <p id="divisionResult"></p>
+    
+    <script>
+        function addNumbers(num1,num2){
+            return num1+num2;
+        }
+        function subtractNumbers(num1,num2){
+            return num1-num2;
+        }
+        function multiplyNumbers(num1,num2){
+            return num1*num2;
+        }
+        function divideNumbers(num1,num2){
+            if(num2!=0){
+                return num1/num2;
+            }
+            else{
+                return "Cannot be divided by zero!"
+            }
+        }
+
+        function performCalculations(){
+            var num1=parseFloat(document.getElementById('num1').value);
+            var num2=parseFloat(document.getElementById('num2').value);
+
+            var addResult = addNumbers(num1,num2);
+            var subResult = subtractNumbers(num1,num2);
+            var multiplyResult = multiplyNumbers(num1,num2);
+            var divResult = divideNumbers(num1,num2);
+
+            // to print these
+            document.getElementById('additionResult').innerText = "Addition is : "+addResult;
+            document.getElementById('subtractionResult').innerText = "Subtraction is : "+subResult;
+            document.getElementById('multiplicationResult').innerText = "Multiplication is : "+multiplyResult;
+            document.getElementById('divisionResult').innerText = "Division is : "+divResult; 
+        }
+    </script>
+</body>
+</html>
+
+ <!-- document.getElementById('additionResult').value = " "
+    this is incorrect because we are using .value on <p> elements. paragraphs (<p></p>) do not have a value property.
+    they use innerText or innerHTML to diplay content.  -->

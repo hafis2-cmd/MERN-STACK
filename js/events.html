@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+        }
+            #colorBox{
+                width: 100px;
+                height: 100px;
+                background-color: lightblue;
+                margin-bottom: 20px;
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    <h1>Click the Box to change the color</h1>
+    <div id="colorBox"></div>
+    <script>
+        function changeColor(){
+            var colorBox=document.getElementById("colorBox");
+            var randomColor=getRandomColor();
+            colorBox.style.backgroundColor=randomColor;   //to get random color
+        }
+        function getRandomColor(){
+            // random color that we are trying to generate will have a hexadecimal value
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for(var i=0;i<6;i++){
+                color+=letters[Math.floor(Math.random()*16)];
+            }
+        }
+
+        document.getElementById("colorBox").addEventListener("click",changeColor);
+    </script>
+</body>
+</html>
+
+
+
+<!-- Math.floor will have an integer value.
+16 is used for letting know about the maximum colors.In this the color will have a length of 6 letters. -->
