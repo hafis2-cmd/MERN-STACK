@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express JS Template Engine</title>
+</head>
+<body>
+    <h1>Welcome to the student list .....!!!!</h1>
+    <ul>
+        <% students.forEach(student => { %>
+            <li><%= student.name %> - <%= student.age %> years old</li>
+        <% }); %>    
+    </ul>
+</body>
+</html>
